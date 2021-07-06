@@ -38,6 +38,10 @@ header {
   text-align: center;
 }
 
+header img {
+  margin-bottom: 1.25em;
+}
+
 h1 {
   margin-bottom: 0.25em;
   font-weight: normal;
@@ -102,6 +106,7 @@ button {
   border: none;
   border-radius: 25px;
   color: white;
+  font-weight: 600;
   font-size: 0.95rem;
   background-color: var(--color-primary);
   cursor: pointer;
@@ -169,9 +174,12 @@ footer p {
     margin-left: 2em;
   }
 
-  input,
+  input {
+    padding: 1.1em 1.8em;
+  }
+
   button {
-    font-size: 1rem;
+    padding: 1.1em;
   }
 
   button {
