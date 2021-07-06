@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+
+:root {
+  --color-primary: hsl(223, 87%, 63%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Libre Franklin", sans-serif;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  width: min(90%, 350px);
+}
+
+/* Header */
+
+header {
+  margin: 3em 0;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 0.25em;
+  font-weight: normal;
+  font-size: 1.75rem;
+  color: hsl(0, 0%, 59%);
+}
+
+h1 span {
+  font-weight: bold;
+  color: hsl(209, 33%, 12%);
+}
+
+header p {
+  color: hsl(209, 33%, 12%);
+}
+
+/* Form */
+
+form {
+  margin-bottom: 3em;
+}
+
+input {
+  width: 100%;
+  padding: 0.9em 1.8em;
+  border: 1px solid hsl(223, 100%, 88%);
+  border-radius: 25px;
+  color: hsl(209, 33%, 12%);
+  font-size: 0.95rem;
+  outline: none;
+}
+
+input::placeholder {
+  color: hsl(0, 0%, 59%);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+}
+
+.form-group small {
+  display: none;
+}
+
+.form-group.invalid input {
+  border: 1px solid hsl(354, 100%, 66%);
+}
+
+.form-group.invalid small {
+  display: block;
+  margin: 0.5em 0;
+  color: hsl(354, 100%, 66%);
+  font-style: italic;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 0.95em;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-size: 0.95rem;
+  background-color: var(--color-primary);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover,
+button:focus {
+  background-color: hsl(223, 87%, 73%);
+}
+
+/* Footer */
+
+footer {
+  margin: 3em 0 2em 0;
+}
+
+footer p {
+  color: hsl(0, 0%, 59%);
+}
+
+.fa {
+  width: 32px;
+  padding: 0.5em;
+  border-radius: 50%;
+  margin: 0.75em 0.25em;
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.fa:hover,
+.fa:focus {
+  color: white;
+  background-color: var(--color-primary);
+}
+
+/* Media Queries */
+
+@media (min-width: 600px) {
+  .container {
+    width: min(90%, 600px);
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  header p {
+    font-size: 1.25rem;
+  }
+
+  form {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .form-group {
+    width: 67%;
+  }
+
+  .form-group.invalid small {
+    text-align: left;
+    margin-left: 2em;
+  }
+
+  input,
+  button {
+    font-size: 1rem;
+  }
+
+  button {
+    width: 30%;
+  }
+}
